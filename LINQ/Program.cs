@@ -28,16 +28,23 @@ namespace LINQ
             //WritePerson(new Person() { Name = "Béla", Age = 5 });
 
             //anonymus type példa
-            var anonymus = new { Name = "Morzsi", Age = 3 };
+            //var anonymus = new { Name = "Morzsi", Age = 3 };
             //ha egyezik az adattagok neve, típusa, sorrendje akkor ugyanolyan típusnak felel meg
-            var anonymus2 = new { Name = "Béla", Age = 10 };
+            //var anonymus2 = new { Name = "Béla", Age = 10 };
+
+
+            //Extension method példa
+            var p = new Person()
+            {
+                Name = "Béla",
+                Age = 5
+            };
+
+            //a két hívás végeredményben megegyezik csak máshogy néz ki
+            //PersonExtensions.WritePerson(p, 187);
+            p.WritePerson(187);
 
             Console.ReadKey();
-        }
-
-        static void WritePerson(Person p)
-        {
-            Console.WriteLine(p.Name + ", " + p.Age);
         }
 
     }
