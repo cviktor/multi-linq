@@ -25,7 +25,12 @@ namespace LINQ
             //};
             //WritePerson(person);
 
-            WritePerson(new Person() { Name = "Béla", Age = 5 });
+            //WritePerson(new Person() { Name = "Béla", Age = 5 });
+
+            //anonymus type példa
+            var anonymus = new { Name = "Morzsi", Age = 3 };
+            //ha egyezik az adattagok neve, típusa, sorrendje akkor ugyanolyan típusnak felel meg
+            var anonymus2 = new { Name = "Béla", Age = 10 };
 
             Console.ReadKey();
         }
