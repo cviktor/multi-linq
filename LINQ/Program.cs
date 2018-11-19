@@ -10,12 +10,30 @@ namespace LINQ
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            //var kulcsszó
+            var number = 3;
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            //var person = new Person();
+            //person.Name = "Béla";
+            //person.Age = 3;
+
+            //object initializer
+            //var person = new Person()
+            //{
+            //    Name = "Béla",
+            //    Age = 5
+            //};
+            //WritePerson(person);
+
+            WritePerson(new Person() { Name = "Béla", Age = 5 });
+
+            Console.ReadKey();
         }
+
+        static void WritePerson(Person p)
+        {
+            Console.WriteLine(p.Name + ", " + p.Age);
+        }
+
     }
 }
